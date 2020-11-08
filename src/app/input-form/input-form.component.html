@@ -5,8 +5,16 @@
         <div class="form-group">
             <label for="author">Author</label>
             <input type="text " class="form-control" id="author" [(ngModel)] = "quote.author" name="author" #author="ngModel">
-            <div class="alert alert-danger" [hidden]="author.valid|| author.pristine">
+            <div class="alert alert-danger" [hidden]="submission.valid|| submission.pristine">
                 <p>Please Enter the name of the author</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="submission">Submitted By</label>
+            <input type="text " class="form-control" id="submission" [(ngModel)] = "quote.submittedBy" name="submission" #submission="ngModel">
+            <div class="alert alert-danger" [hidden]="author.valid|| author.pristine">
+                <p>Please Enter your name</p>
             </div>
         </div>
 
