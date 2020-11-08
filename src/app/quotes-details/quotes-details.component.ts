@@ -14,7 +14,9 @@ export class QuotesDetailsComponent implements OnInit {
     this.isRead.emit(complete);
   }
   
-  
+  quoteDelete(complete:boolean){
+    this.isRead.emit(complete);
+  }
  
 
   constructor() { }
