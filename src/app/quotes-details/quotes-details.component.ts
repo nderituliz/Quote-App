@@ -8,6 +8,8 @@ import {Quotes} from '../quotes';
 })
 export class QuotesDetailsComponent implements OnInit {
   @Input() quotes : Quotes;
+  @Output() isRead = new EventEmitter<boolean>();
+  
  
 
   constructor() { }
