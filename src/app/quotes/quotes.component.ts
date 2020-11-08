@@ -22,6 +22,13 @@ export class QuotesComponent implements OnInit {
 
   }
 
+  quoteDelete(isRead, index){
+    if(isRead){
+      this.quotes.splice(index,1);
+
+    }
+  }
+
   addNewQuote(quote){
     let lengthOfQuote = this.quotes.length;
     this.quotes.push(quote);
