@@ -2,6 +2,13 @@
     <h2>Submit a quote!</h2>
     <br>
     <form (ngSubmit)='submitQuote()' #quoteFrom = 'ngForm'>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text " class="form-control" id="author" [(ngModel)] = "quote.author" name="author" #author="ngModel">
+            <div class="alert alert-danger" [hidden]="author.valid|| author.pristine">
+                <p>Please Enter the name of the author</p>
+            </div>
+        </div>
 
     </form>
 </div>
