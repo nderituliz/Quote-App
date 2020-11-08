@@ -8,23 +8,32 @@
 <body>
     <div class="container">
         <div class="row">
-            <div *ngFor = 'let quote of quotes; let i =index'>
-                
-                    <!-- <div class="card-body">
-                        <p class="card-title">{{quote.quote}}</p>
-                    </div> -->
-                    <blockquote class="blockquote">
-                        <p class="mb-1">"{{quote.quote}}"</p>
-                        <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
-                        <!-- <app-up-vote></app-up-vote> -->
-                    </blockquote>
+            <div class="col-md-12 text-center">
+                <ul>
+                    <div *ngFor = 'let quote of quotes; let i =index'>
+                    
+                        
+                        <blockquote class="blockquote">
+                            <p class="mb-1">"{{quote.quote}}"</p>
+                            <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
+                            <app-vote></app-vote> 
+                        </blockquote>
 
-                    <button class="btn btn-info" (click) = 'toggleDetails(i)'>More</button>                        
-                                <app-quotes-details *ngIf = 'quote.showMore' [quote] = 'quote' (isRead) = 'quoteDelete($event,i)'></app-quotes-details>
-                
+                        <button class="btn btn-info" (click) = 'toggleDetails(i)'>More</button>                        
+                                    <app-quotes-details *ngIf = 'quote.showMore' [quote] = 'quote' (isRead) = 'quoteDelete($event,i)'></app-quotes-details>
+                    
 
+                    </div>
+                </ul>
             </div>
         
+        </div>
+        <br><br>
+        <hr><hr>
+        <div class="row">
+            <div class="col-md-12 form">
+                <app-input-form (addQuote) ="addNewQuote($event)"></app-input-form>
+            </div>
         </div>
     </div>
 </body>
