@@ -14,8 +14,9 @@
                     
                         
                         <blockquote class="blockquote">
-                            <p class="mb-1">"{{quote.quote}}"</p>
+                            <p appHighlight class="mb-1">"{{quote.quote}}"</p>
                             <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
+                            <p class="text-muted"> Quote was posted {{quote.dateCreated|dateCount}} ago.</p>
                             <app-vote></app-vote> 
                         </blockquote>
 

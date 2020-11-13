@@ -9,11 +9,12 @@ import { Quote } from '@angular/compiler';
 })
 export class InputFormComponent implements OnInit {
 
-  quote = new Quotes("","","");
+  quote = new Quotes("","","",new Date());
   @Output() addQuote = new EventEmitter<Quotes>();
 
   submitQuote(){
     this.addQuote.emit(this.quote);
+    
   }
 
   constructor() { }
